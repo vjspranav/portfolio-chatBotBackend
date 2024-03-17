@@ -43,7 +43,7 @@ const myData = [
     },
     {
       text: "tools I am comfortable with are Git, Jenkins, and GitHub Actions. I have worked on a few projects with these tools and have a good understanding of them. I automate all of my backend and frontend works using GitHub actions and all my OS releases are done using Jenkins.",
-      labels: ["Skills", "GitHub"],
+      labels: ["Skills"],
     },
     {
       text: "Currently honing my skills and expanding my knowledge at IIITH, where I'm tackling a BTech + MS in Computer Science with a CGPA of 8.39. When I'm not coding, I'm leading the Cloud at GDSC IIIT-H, assisting in research, or sharing my knowledge as a Teaching Assistant.",
@@ -55,7 +55,7 @@ const myData = [
     },
     {
       text: "I have been an RA at Smart City Research Center(SCRC), IIITH. I have worked on a few projects specifically around interoperability of IoT devices and have published a paper: https://www.researchgate.net/publication/373929456_Scalable_and_Interoperable_Distributed_Architecture_for_IoT_in_Smart_Cities",
-      labels: ["Education"],
+      labels: ["Education", "Research"],
     },
     {
       text: "My favorite quotes include, 'Manners Maketh Man' (Heard it in Kingsman but a classic), 'Sic Parvis Magna'. 'Sic Parvis Magna' is also the motto for my StagOS. In a nutshell",
