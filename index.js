@@ -1,4 +1,5 @@
 const https = require('https');
+const {classifyText} = require("inference")
 
 function httpsPost({ hostname, path, headers, body }) {
   return new Promise((resolve, reject) => {
@@ -17,7 +18,7 @@ function httpsPost({ hostname, path, headers, body }) {
         console.log('HTTPS response received. Processing...');
         if (res.statusCode >= 200 && res.statusCode < 300) {
           console.log('Successful response:', data);
-          resolve(JSON.parse(data));
+          resolve({ data: JSON.parse(data), statusCode: res.statusCode }); // Include status code
         } else {
           console.log(`Error with response. Status code: ${res.statusCode}`, data);
           reject(new Error(`HTTP status code ${res.statusCode}`));
@@ -113,6 +114,8 @@ exports.handler = async (event) => {
     };
   }
 
+  const labels = await classifyText("test", "test1, 2, 3", httpsPost)
+
   // Prepare the payload for the Gemini API, including the updated conversation context
   const gemini_payload = JSON.stringify({
     contents: updatedConversationContext
@@ -134,7 +137,8 @@ exports.handler = async (event) => {
     return {
       statusCode: 200,
       headers: { 'Access-Control-Allow-Origin': '*' },
-      body: JSON.stringify(response) // Ensure the response is stringified
+      body: JSON.stringify(response.data), // Ensure the response is stringified
+      labels: JSON.stringify(labels)
     };
   } catch (error) {
     console.log('Error occurred:', error.message);
