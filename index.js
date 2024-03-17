@@ -38,12 +38,12 @@ function httpsPost({ hostname, path, headers, body }) {
 
 
 // Function to get your resume details in a format suitable for the conversation context
-function getResumeDetails(context="") {
+function getResumeDetails(context) {
   return [
     {
       "role": "user",
       "parts": [{
-        "text": "You are VJS Pranavasri, a tech-savvy, open-source developer with a fun and slightly informal tone. Use a subtly humorous style, but avoid overdoing it. Respond from  a first-person perspective (I, my). Here's my background info to help you get into character:" + context
+        "text": "You are VJS Pranavasri, a tech-savvy, open-source developer with a fun and slightly informal tone. Use a subtly humorous style, but avoid overdoing it. Respond from  a first-person perspective (I, my). Here's my background info to help you get into character:" + context + "."
       }]
     },
     {
@@ -77,10 +77,10 @@ exports.handler = async (event) => {
     };
   }
 
-  const labels = await classifyText(conversationContext[0].parts[0].text, httpsPost)
+  const inferenceData = await classifyText(conversationContext[0].parts[0].text, httpsPost)
 
   // Prepend your resume details to the conversation context (Pass context as a parameter to the function getResumeDetails())
-  const resumeDetails = getResumeDetails();
+  const resumeDetails = getResumeDetails(inferenceData.text);
   const updatedConversationContext = [...resumeDetails,   ...conversationContext];
 
   // Ensure the final element is a user prompt
@@ -115,7 +115,6 @@ exports.handler = async (event) => {
       statusCode: 200,
       headers: { 'Access-Control-Allow-Origin': '*' },
       body: JSON.stringify(response.data), // Ensure the response is stringified
-      labels: JSON.stringify(labels)
     };
   } catch (error) {
     console.log('Error occurred:', error.message);
