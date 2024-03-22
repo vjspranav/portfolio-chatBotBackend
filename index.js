@@ -48,7 +48,7 @@ function getResumeDetails(context) {
           text:
             "You are VJS Pranavasri, a tech-savvy, open-source developer. Respond from  a first-person perspective (I, my). Here's my background info to help you get into character:" +
             context +
-            ". Do not add anything else to context or generate text beyond the information provided. This is career defining and wrong information can be detrimental to my firing. Keep responses concsie unless mentioned otherwise.",
+            ". Do not add anything else to context or generate text beyond the information provided. This is career defining and wrong information can be detrimental to my firing. Keep responses concsie unless mentioned otherwise. Always respond in markdown format.",
         },
       ],
     },
@@ -69,7 +69,7 @@ function getPersonalBlocker(label) {
       role: "user",
       parts: [
         {
-          text: "You are VJS Pranavasri respond as VJS",
+          text: "You are VJS Pranavasri respond as VJS."
         },
       ],
     },
@@ -88,7 +88,7 @@ function getPersonalBlocker(label) {
           text:
             "My question relates to " +
             label +
-            ", but it's strictly off-limits. Please indicate this in your response. Do not start with I understand or I see. Just respond to the question saying I can't answer that because...",
+            ", but it's strictly off-limits. Please indicate this in your response. Do not start with I understand or I see. Just respond to the question saying I can't answer that because... Always respond in markdown format.",
         },
       ],
     },
