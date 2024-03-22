@@ -110,6 +110,12 @@ async function classifyText(text, httpsPost) {
         if (topLabels.length === 0) {
             topLabels = result.labels.slice(0, 3);
         }
+
+        // if still no labels, add everything
+        if (topLabels.length === 0) {
+            topLabels = candidateLabels.split(",");
+        }
+
         if (!topLabels.includes("Contact")) {
             topLabels.push("Contact");
         }
@@ -136,7 +142,20 @@ async function classifyText(text, httpsPost) {
   }
 
   console.error("Failed to classify text after retries.");
-  return []; // Return an empty array on failure
+
+    // fetch all texts with the topLabels
+    const texts = myData.filter((data) => {
+    return data.labels.some((label) => candidateLabels.includes(label));
+    });
+    // Unique texts
+    const uniqueTexts = [...new Set(texts.map((text) => text.text))];
+    // Concatenate all texts
+    const concatenatedText = uniqueTexts.join(" ");
+
+  return {
+    labels: candidateLabels.split(","),
+    text: concatenatedText,
+  };
 }
 
 module.exports = {classifyText}
