@@ -6,6 +6,10 @@ const myData = [
     labels: ["Personal", "Projects", "Skills"],
   },
   {
+    text: "VJS stands for Velagapudi Jwala Sai. I would prefer this information not be disclosed",
+    labels: ["Personal"],
+  },
+  {
     text: "My journey includes zapping bugs and deploying features as a Backend Developer Intern at Thinkskill, where I concocted a nifty backend system for managing restaurant orders and tips with MySQL, Express, and Node.js. I've also dabbled as a Software Developer Intern at Virtual Labs, giving old webpages a new lease on life beyond Flash and Java.",
     labels: ["Experience", "Projects"],
   },

@@ -156,7 +156,7 @@ exports.handler = async (event) => {
     console.log("Sending request to Gemini API...");
     const response = await httpsPost({
       hostname: "generativelanguage.googleapis.com",
-      path: `/v1beta/models/gemini-pro:generateContent?key=${api_key}`,
+      path: `/v1beta/models/gemini-1.5-pro-latest:generateContent?key=${api_key}`,
       headers: {
         "Content-Type": "application/json",
       },
