@@ -22,6 +22,10 @@ const myData = [
     labels: ["Experience", "Projects"],
   },
   {
+    text: "I currently Work as a Software Engineer at Apple. I started in 2024",
+    labels: ["Experience"]
+  },
+  {
     text: "I'm the lead developer and co-founder of Stag-OS, where I have supported over 14 devices with more than 100,000 downloads. It is a custom ROM developed from scratch based on AOSP. In this process, I have gained huge experience in working with servers, Linux systems, Java, GitHub CI/CD using Jenkins, and Bug reporting/reviewing through Gerrit. motivation for stag was the fact that Stag was Harry's patronus and those horns represent elegance. 'Sic Parvis Magna' is also the motto for my StagOS. StagOS website: stag-os.org.",
     labels: ["Projects", "StagOS"],
   },
@@ -50,7 +54,7 @@ const myData = [
     labels: ["Skills"],
   },
   {
-    text: "Currently honing my skills and expanding my knowledge at IIITH, where I'm tackling a BTech + MS in Computer Science with a CGPA of 8.39. When I'm not coding, I'm leading the Cloud at GDSC IIIT-H, assisting in research, or sharing my knowledge as a Teaching Assistant.",
+    text: "I have graduated from IIITH, where I overcame the hurdle of a BTech + MS in Computer Science with a CGPA of 8.39. While I was at IIITH and not coding, I'm leading the Cloud at GDSC IIIT-H, assisting in research, or sharing my knowledge as a Teaching Assistant.",
     labels: ["Education"],
   },
   {
@@ -58,16 +62,20 @@ const myData = [
     labels: ["Education"],
   },
   {
-    text: "I have been an RA at Smart City Research Center(SCRC), IIITH. I have worked on a few projects specifically around interoperability of IoT devices and have published a paper: https://www.researchgate.net/publication/373929456_Scalable_and_Interoperable_Distributed_Architecture_for_IoT_in_Smart_Cities",
+    text: "I have been an RA at Smart City Research Center(SCRC), IIITH. I have worked on a few projects specifically around interoperability of IoT devices and have published a paper",
     labels: ["Education", "Research"],
   },
   {
-    text: "Scalable and Interoperable Distributed Architecture for IoT in Smart Cities is my paper that got accepted in WF-IoT 2023. I worked on this paper as a part of my MS Research at Smart City Research Center(SCRC), IIITH. The paper is about the interoperability of IoT devices and how to make them scalable. The paper is available at https://www.researchgate.net/publication/373929456_Scalable_and_Interoperable_Distributed_Architecture_for_IoT_in_Smart_Cities",
+    text: "Scalable and Interoperable Distributed Architecture for IoT in Smart Cities is my paper that got accepted in WF-IoT 2023. I worked on this paper as a part of my MS Research at Smart City Research Center(SCRC), IIITH. The paper is about the interoperability of IoT devices and how to make them scalable. The paper is available at https://ieeexplore.ieee.org/document/10539501",
     labels: ["Research"],
   },
   {
-    text: "Exploratory Study of oneM2M-based Interoperability Architectures for IoT: A Smart City Perspective is my second paper that got accepted in SAIP track of ICSA 2024. I will be publishing in preprint soon. It is not under review, it has been accepted.",
+    text: "Exploratory Study of oneM2M-based Interoperability Architectures for IoT: A Smart City Perspective is my second paper that got accepted in SAIP track of ICSA 2024. I presented the paper at the conferebce, it has been accepted. The Official draft is available at https://smartcitylivinglab.iiit.ac.in/api-media/pdf_files/Exploratory_Study_of_oneM2M-based_Interoperability.pdf",
     labels: ["Research"],
+  },
+  {
+    text: "I successfully defended my Thesis titled: 'Towards Scalable Architectures in oneM2M-based Interoperability deployments in Smart Cities'. The blog by IIIT for the same is at: https://blogs.iiit.ac.in/monthly_news/v-j-s-pranavasri/ and the Thesis itself is available at: https://web2py.iiit.ac.in/research_centres/publications/download/mastersthesis.pdf.8c8d245eaff924d2.323032303132313030312d4d532d5468657369732e706466.pdf. I graduated with this defence in July 2024",
+    labels: ["Research", "Education", "Personal"]
   },
   {
     text: "My favorite quotes include, 'Manners Maketh Man' (Heard it in Kingsman but a classic), 'Sic Parvis Magna'. 'Sic Parvis Magna' is also the motto for my StagOS. In a nutshell",
@@ -86,7 +94,6 @@ const candidateLabels = [
 const highlyPersonalLabels = [
   "Relationships",
   "Beliefs",
-  "Finances",
   "Health",
   "Mental Health",
   "Appearance",
